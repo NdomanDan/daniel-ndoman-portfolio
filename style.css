@@ -406,7 +406,9 @@ body.viewer-open { overflow: hidden; }
 /* Responsive hardening */
 img,svg { max-width: 100%; }
 .hero-copy,.case-hero > div,.section-heading > *,.index-project > * { min-width: 0; }
-.case-hero h1,.page-hero h1,.about-hero h1,.contact-page h1 { overflow-wrap: anywhere; }
+.case-hero h1 { overflow-wrap: break-word; }
+.page-hero h1,.about-hero h1,.contact-page h1 { overflow-wrap: normal; word-break: normal; hyphens: none; }
+.about-hero h1 { font-size: clamp(56px,6vw,88px); line-height: .94; letter-spacing: -.07em; }
 
 @media (max-width: 760px) {
   .header-inner { height: 74px; min-height: 74px; flex-wrap: nowrap; gap: 12px; padding-block: 8px; }
